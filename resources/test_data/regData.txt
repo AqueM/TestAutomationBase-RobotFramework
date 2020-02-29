@@ -1,0 +1,4 @@
+Dorota,Kowalska,asdfg,Street,City,00000,1234
+Alicja,Programistka,zxcvb,Avenue,Chicago,00000,1234
+Marcin,Nowak,qwert,Road,Kansas,00000,1234
+Kuba,Tester,12346,Path,Washington,0000,1234

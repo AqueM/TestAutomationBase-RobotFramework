@@ -1,0 +1,1 @@
+python -m robot --outputdir reports testcases

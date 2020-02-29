@@ -1,0 +1,16 @@
+*** Test Cases ***,${value},${field},[Tags]
+Numerical firstname,123,customer_firstName,validation
+Special characters firstname,@#!$@,customer_firstName,validation
+Alphanumerical firstname,ABC123,customer_firstName,validation
+Empty firstname,,customer_firstName,validation
+Numerical lastname,123,customer_lastName,validation
+Special characters lastname,@#!$@,customer_lastName,validation
+Alphanumerical lastname,ABC123,customer_lastName,validation
+Empty lastname,,customer_lastName,validation
+Empty address,,address,validation
+Empty city,,city,validation
+ZIP too short,11,postcode,validation
+Letters for ZIP + too short,aa,postcode,validation
+ZIP too short by one number,0000,postcode,validation
+Phone empty,,phone,validation
+Letters for phone,asd,phone,validation

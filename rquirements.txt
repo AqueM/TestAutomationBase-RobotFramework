@@ -1,0 +1,5 @@
+robotframework==3.1.2
+robotframework-datadriver==0.3.6
+robotframework-seleniumlibrary==4.3.0
+selenium==3.141.0
+urllib3
