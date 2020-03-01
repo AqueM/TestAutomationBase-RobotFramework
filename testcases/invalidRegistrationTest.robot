@@ -1,9 +1,7 @@
 *** Settings ***
-Library             SeleniumLibrary           run_on_failure=Capture Page Screenshot
 Library             DataDriver    ../resources/test_data/invalidRegister.csv    dialect=excel
 Resource            ../resources/keywords/registration.robot
 Resource            ../resources/setup.robot
-Variables           ../page_objects/locators.py
 
 Test Template      Data validation check on the Registration form
 Suite Setup         Initialize browser window

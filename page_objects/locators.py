@@ -1,24 +1,24 @@
 # Login page locators
-input_emailRegister = "name:email_create"
-input_emailLogin = "name:email"
-input_passwordLogin = "name:passwd"
+input_email_register = "name:email_create"
+input_email_login = "name:email"
+input_password_login = "name:passwd"
 
-btn_signIn = "name:SubmitLogin"
-btn_createAccount = "id:SubmitCreate"
+btn_sign_in = "name:SubmitLogin"
+btn_create_account = "id:SubmitCreate"
 
-txt_invalidEmailRegister = "id:create_account_error"
-txt_invalidLogin = "xpath://div[contains(@class,'alert-danger') and not(contains(@id,'create'))]"
+txt_invalid_email_register = "id:create_account_error"
+txt_invalid_login = "xpath://div[contains(@class,'alert-danger') and not(contains(@id,'create'))]"
 
-txt_forgottenPassword = "xpath://p[contains(@class,'lost_password')]"
+txt_forgotten_password = "xpath://p[contains(@class,'lost_password')]"
 
 # Registration form locators
-frame_registrationForm = "account-creation_form"
-input_customerFirstName = "customer_firstname"
-input_customerLastName = "customer_lastname"
-input_registerPassword = "passwd"
+frame_registration_form = "account-creation_form"
+input_customer_firstname = "customer_firstname"
+input_customer_lastname = "customer_lastname"
+input_register_password = "passwd"
 
-input_firstName = "firstname"
-input_lastName = "lastname"
+input_firstname = "firstname"
+input_lastname = "lastname"
 input_address = "address1"
 input_city = "city"
 selector_state = "id_state"
@@ -27,10 +27,10 @@ input_phone = "phone"
 
 btn_register = "submitAccount"
 
-registerInputs = [input_customerFirstName, input_customerLastName, input_registerPassword, input_address, input_city,
-                  input_postcode, input_phone]
+register_inputs = [input_customer_firstname, input_customer_lastname, input_register_password, input_address,
+                   input_city, input_postcode, input_phone]
 
-txt_invalidData = "xpath://div[contains(@class,'alert-danger')]"
+txt_invalid_data = "xpath://div[contains(@class,'alert-danger')]"
 
 # My Account Page locators
-frame_accountInfo = "class:info-account"
+txt_account_info = "class:header_user_info"
