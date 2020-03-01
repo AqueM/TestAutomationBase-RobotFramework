@@ -1,5 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary           run_on_failure=Failure log  screenshot_root_directory=../reports/screenshots
+Library           SeleniumLibrary           run_on_failure=Failure log  screenshot_root_directory=reports/screenshots
 Library           ../resources/variables.py
 
 Variables          ../page_objects/environment.py
@@ -22,7 +22,7 @@ Failure log
 
 Initialize with user
     Initialize browser window
-    ${user}=        Get valid user
+    @{user}=        Get valid user
     Set suite variable      ${username}     @{user}[0]
     Set suite variable      ${password}     @{user}[1]
     Set suite variable      ${name}         @{user}[2]

@@ -1,5 +1,6 @@
 *** Settings ***
-Variables        ../../page_objects/locators.py
+Variables       ../page_objects/locators_register.py
+Variables       ../page_objects/locators_login.py
 Variables        ../variables.py
 
 *** Keywords ***
@@ -18,7 +19,7 @@ I fill out registration form
     \   Input Text      @{fields}[${index}]       @{user}[${index}]
     Input Text      ${input_firstname}     @{user}[0]
     Input Text      ${input_lastname}     @{user}[1]
-    Select from list by value   ${selector_state}       1
+    Select from list by value   ${selector_state}       ${random_state}
 
 I input invalid data into a registration field
     [Arguments]     ${value}     ${field}

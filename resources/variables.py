@@ -1,25 +1,27 @@
 from random import randint, choice
 
+from page_objects.test_data_files import valid_registration_mandatory_fields
+from page_objects.test_data_files import valid_users
+
 # test data
-random_number = randint(1, 101)
-random_email = "Test" + str(random_number) + "@netguru.com"
+
+random_email = "Test" + str(randint(1, 101)) + "@netguru.com"
+random_state = str(randint(1, 51))
+
+
+def get_data_from_csv(file):
+    # grabs a random row from file and returns its contents as list
+    with open(file) as f:
+        data_list = f.read().splitlines()
+        data_list.pop(0)
+        my_pick = choice(data_list)
+        data = my_pick.split(',')
+    return data
 
 
 def get_valid_user():
-    # grabs a random row from file and returns its contents as list
-    with open('resources/test_data/validUsers.csv') as f:
-        users = f.read().splitlines()
-        users.pop(0)
-        my_pick = choice(users)
-        user = my_pick.split(',')
-    return user
+    return get_data_from_csv(valid_users)
 
 
 def get_valid_registration_data():
-    # grabs a random row from file and returns its contents as list
-    with open('resources/test_data/regData.csv') as f:
-        users = f.read().splitlines()
-        users.pop(0)
-        my_pick = choice(users)
-        user = my_pick.split(',')
-    return user
+    return get_data_from_csv(valid_registration_mandatory_fields)
