@@ -4,8 +4,8 @@ Resource            ../resources/keywords/registration.robot
 Resource            ../resources/setup.robot
 
 Test Template      Data validation check on the Registration form
-Suite Setup         Initialize browser window
-Suite Teardown      Close all browser windows
+Test Setup         Initialize browser window
+Test Teardown      Close all browser windows
 
 *** Test Case ***
     Try to register with invalid ${value} in ${field}

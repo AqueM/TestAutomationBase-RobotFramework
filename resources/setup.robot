@@ -2,7 +2,7 @@
 Library           SeleniumLibrary           run_on_failure=Failure log  screenshot_root_directory=reports/screenshots
 Library           ../resources/variables.py
 
-Variables          ../page_objects/environment.py
+Variables          ../resources/environment.py
 
 *** Variables ***
 ${login_url}      ${login_page_url}

@@ -1,6 +1,6 @@
 *** Settings ***
-Variables       ../page_objects/locators_register.py
-Variables       ../page_objects/locators_login.py
+Variables       ../../page_objects/locators_register.py
+Variables       ../../page_objects/locators_login.py
 Variables        ../variables.py
 
 *** Keywords ***
@@ -16,6 +16,7 @@ I fill out registration form
     @{fields}=      Set variable        @{register_inputs}
     ${length}=      Get length      ${user}
     :FOR    ${index}    IN RANGE     0  ${length}
+    \   Wait until element is visible        @{fields}[${index}]    # additional wait because Firefox is too fast
     \   Input Text      @{fields}[${index}]       @{user}[${index}]
     Input Text      ${input_firstname}     @{user}[0]
     Input Text      ${input_lastname}     @{user}[1]
@@ -23,7 +24,6 @@ I fill out registration form
 
 I input invalid data into a registration field
     [Arguments]     ${value}     ${field}
-    Scroll element into view    ${input_${field}}
     Input Text    ${input_${field}}     ${value}
 
 I finish registration
