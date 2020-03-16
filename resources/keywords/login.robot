@@ -1,5 +1,5 @@
 *** Settings ***
-Variables       ../page_objects/locators_login.py
+Variables       ../../page_objects/locators_login.py
 
 
 *** Keywords ***
